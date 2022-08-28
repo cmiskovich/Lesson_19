@@ -1,7 +1,18 @@
 # Lesson_19
 # Primary application file
+Integrating crypto_wallet.py and fintech_finder.py files will automate the tasks associated with generating a digital wallet, accessing Ethereum account balances, and signing and sending transactions via a personal Ethereum blockchain called Ganache.
 
-You will need to make the following updates to the provided Python file for this Challenge, which already contains the basic PyChain ledger structure that you created throughout module 18.
+Specifically, as the perspective of a Fintech Finder customer in order to do the following:
+
+Generate a new Ethereum account instance by using the mnemonic seed phrase provided by Ganache.
+
+Fetch and display the account balance associated with your Ethereum account address.
+
+Calculate the total value of an Ethereum transaction, including the gas estimate, that pays a Fintech Finder candidate for their work.
+
+Digitally sign a transaction that pays a Fintech Finder candidate, and send this transaction to the Ganache blockchain.
+
+Review the transaction hash code associated with the validated blockchain transaction.
 
 
 ---
@@ -29,44 +40,40 @@ Visual Studio Code
 ---
 
 ## General information about analysis.
-There are four parts to this Lesson:
+There are three parts to this Lesson:
 
-### Create a Record Data Class
+### Import Ethereum Transaction Functions into the Fintech Finder Application:
 
-In the first part you will define a new Python data class named Record. Give this new class a formalized data structure that consists of the sender, receiver, and amount attributes. 
+In the first part you will review the code contained in the crypto_wallet.py file.  You have modules built through Lesson 19 already incorporated into starting files.  After that you add you mnemonic seed phrase from Ganache into your .env file.
 
-To do so, complete the following steps:
+After that go into the fintech_finder.py file and import the functions from crypto_wallet.py file for:
 
-Define a new class named Record.  Next, add the @dataclass decorator immediately before the Record class definition.  Then, add an attribute named sender of type str, receiver of type str, and amount of type float.
+generate_account
 
+get_balance
 
-### Modify the Existing Block Data Class to Store Record Data
+send_transaction
 
-In the second part modify the Existing Block Data Class to Store Record Data, rename the data attribute in your Block class to record, and then set it to use an instance of the new Record class that you created in the previous section. 
+Then using the Streamlit sidebar section of code, create a variable named account. Set this variable equal to a call on the generate_account function. This function will create the Fintech Finder customer’s (in this case, your) HD wallet and Ethereum account.
 
-To do so, complete the following steps:
-
-In the Block class, rename the data attribute to record and set the data type of the record attribute to Record.
-
-
-### Add Relevant User Inputs to the Streamlit Interface
-
-Code additional input areas for the user interface of your Streamlit application. Create these input areas to capture the sender, receiver, and amount for each transaction that you’ll store in the Block record. To do so, complete the following steps:
-
-Delete the input_data variable from the Streamlit interface.  Add an input area where you can get a value for sender from the user, receiver from the user, and amount from the user.
-
-As part of the Add Block button functionality, update new_block so that Block consists of an attribute named record, which is set equal to a Record that contains the sender, receiver, and amount values. The updated Blockshould also include the attributes for creator_id and prev_hash.
+The last step in this part using same section of the fintech_finder.py file, define a new st.sidebar.write function that will display the balance of the customer’s account. Inside this function, call the get_balance function and pass it your Ethereum account.address.
 
 
-### Test the PyChain Ledger by Storing Records
 
-Test your complete PyChain ledger and user interface by running your Streamlit application and storing some mined blocks in your PyChain ledger. Then test the blockchain validation process by using your PyChain ledger. To do so, complete the following steps:
+### Sign and Execute a Payment Transaction:
 
-In the terminal, navigate to the project folder where you've coded the Challenge, and run the Streamlit application by using streamlit run pychain.py.
+For this section you'll write the code that will calculate a fintech professional’s wage, in ether, based on the worker’s hourly rate and the number of hours that they work for a customer. 
 
-Enter values for the sender, receiver, and amount, and then click the Add Block button. Do this several times to store several blocks in the ledger.
+Then write code that uses the calculated wage value to send a transaction that pays the worker. This code should allow the Fintech Finder customer to authorize the transaction with their digital signature. For the purpose of testing out this application, you will use your own Ethereum account information as the customer account information.
 
-Verify the block contents and hashes in the Streamlit drop-down menu. Take a screenshot of the Streamlit application page, which should detail a blockchain that consists of multiple blocks. Include the screenshot in the README.md file for your Challenge repository.
+
+### Inspect the Transaction
+
+Now it's time to put it all together and test the Fintech Finder application with your newly integrated Ethereum wallet. You will send a test transaction by using the application’s web interface, and then look up the resulting transaction in Ganache.
+
+First you need to launch the streamlit application.  Then hire a candidate using the drop down menu and number of hours for the candidate selected and click the send transaction button.
+
+
 
 
 ![PyChain](Lesson_18_Pychain.png)
