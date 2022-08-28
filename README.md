@@ -97,34 +97,31 @@ Also showing receipient's history:
 
 ## Information about datasets
 
-Create a data class for sender, receiver, and amount:
+List of candidates and attributes:
 
-@dataclass
-Class: Record
+candidate_database
 
-Block data class to store and record data:
+people
 
-@dataclass
-class Block:
+db_list
 
-Function for hash block:
+candidate 
 
-def hash_block(self)
+hourly_rate 
 
-PyChain data class:
+candidate_address
 
-@dataclass
-class PyChain:
+Generate account:
 
+account
 
-Function to add block to the block chain:
+Wage calculation:
 
-def add_block(self, candidate_block):
+wage
 
+Calling send_transaction for account, candidate_address and wage:
 
-Function for checking validity of block;
-
-def is_valid(self):
+transaction_hash
 
 ---
 
@@ -136,11 +133,15 @@ dataclass
 
 typing
 
-datetime
+web3
 
-pandas
+w3
 
-hashlib
+generate_account
+
+get_balance
+
+send_transaction
 
 ---
 
