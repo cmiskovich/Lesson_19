@@ -15,6 +15,7 @@ Digitally sign a transaction that pays a Fintech Finder candidate, and send this
 Review the transaction hash code associated with the validated blockchain transaction.
 
 
+
 ---
 
 ## Technologies
@@ -73,17 +74,13 @@ Now it's time to put it all together and test the Fintech Finder application wit
 
 First you need to launch the streamlit application.  Then hire a candidate using the drop down menu and number of hours for the candidate selected and click the send transaction button.
 
+Including a screen shotshoot of address balance and history from Ganache:
+
+
+.[balances](/Account balances Ganache.png)
 
 
 
-![PyChain](Lesson_18_Pychain.png)
-
-![Full_Ledger](PyChain_full_ledger.png)
-
-Test the blockchain validation process by using the web interface. Take a screenshot of the Streamlit application page, which should indicate the validity of the blockchain. Include the screenshot in the README.md file for your Challenge repository.
-
-
-![Validate](Validate_block_chain.png)
 
 
 
