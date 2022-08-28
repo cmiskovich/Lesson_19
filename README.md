@@ -77,15 +77,21 @@ First you need to launch the streamlit application.  Then hire a candidate using
 Including a screen shotshoot of address balance and history from Ganache:
 
 
-.[balances](/Account balances Ganache.png)
+![balances](/Account_balances_Ganache.png)
 
+You can see the balance was reduced from the first line and increased on the second line with the transaction completed.
 
+Transaction history:
 
+![history](transaction_history.png)
 
+Screenshot of showing recipient's balance:
 
+![Rbalance](Increase_client_acct.png)
 
+Also showing receipient's history:
 
-
+![history](transaction_history.png)
 
 ---
 
